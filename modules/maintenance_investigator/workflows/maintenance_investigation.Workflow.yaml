@@ -1,0 +1,3 @@
+externalId: maintenance_investigation
+description: Detect Pump P-101 anomalies and build an investigation.
+dataSetExternalId: cdf-maintenance-investigator-demo

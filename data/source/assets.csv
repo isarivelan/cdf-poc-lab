@@ -1,0 +1,9 @@
+external_id,name,entity_type,description,parent_external_id,equipment_type,manufacturer,model,serial_number,installation_date,criticality,status,functional_location
+SITE-CHN-DEMO,Chennai Manufacturing Demo Site,site,Synthetic demonstration site. Not a real facility.,,,,,,,,active,
+FL-UTILITIES,Utilities Area,functional_location,Utilities functional location for the demo site.,SITE-CHN-DEMO,,,,,,,active,
+FL-CWS,Cooling Water System,functional_location,Cooling water system inside the utilities area.,FL-UTILITIES,,,,,,,active,FL-UTILITIES
+PUMP-P101,Cooling Water Pump 101,equipment,Centrifugal cooling-water pump. Synthetic demonstration asset.,FL-CWS,centrifugal_pump,AquaFlow Industries,CF-200,SN-P101-DEMO,2022-04-15,high,running,FL-CWS
+MOTOR-M101,Motor for Pump 101,equipment,Induction motor coupled to Pump P-101.,FL-CWS,induction_motor,Northwind Drives,ND-160,SN-M101-DEMO,2022-04-15,high,running,FL-CWS
+VALVE-V101,Pump discharge valve,equipment,Discharge isolation and control valve for Pump P-101.,FL-CWS,control_valve,Harbor Valve,HV-90,SN-V101-DEMO,2022-04-15,medium,open,FL-CWS
+BEARING-P101-DE,Drive-end bearing,equipment,Drive-end rolling-element bearing on Pump P-101.,PUMP-P101,bearing,AquaFlow Industries,DE-6316,SN-P101-DE-DEMO,2025-03-12,high,installed,FL-CWS
+BEARING-P101-NDE,Non-drive-end bearing,equipment,Non-drive-end rolling-element bearing on Pump P-101.,PUMP-P101,bearing,AquaFlow Industries,NDE-6314,SN-P101-NDE-DEMO,2022-04-15,medium,installed,FL-CWS

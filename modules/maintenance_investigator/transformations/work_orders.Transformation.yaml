@@ -1,0 +1,13 @@
+externalId: tr_maint_work_orders
+name: Stage demo work orders
+ignoreNullFields: true
+conflictMode: upsert
+dataSetExternalId: cdf-maintenance-investigator-demo
+queryFile: work_orders.sql
+destination:
+  type: nodes
+  instanceSpace: cdf_maintenance_demo_instances
+  view:
+    space: cdf_maintenance_demo
+    externalId: WorkOrder
+    version: v1

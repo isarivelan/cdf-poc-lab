@@ -1,0 +1,66 @@
+site_name: Chennai Manufacturing Demo Site
+primary_equipment: PUMP-P101
+related_equipment:
+  - MOTOR-M101
+  - VALVE-V101
+  - BEARING-P101-DE
+  - BEARING-P101-NDE
+merge_gap_minutes: 15
+baseline_lookback_hours: 48
+operating:
+  sensor: M101_MOTOR_SPEED_RPM
+  minimum: 1400
+context_limits:
+  max_work_orders: 5
+  max_document_passages: 6
+  max_observed_facts: 12
+  max_passage_chars: 400
+health_deductions:
+  vibration_critical: 18
+  vibration_warning: 10
+  temperature_critical: 16
+  temperature_warning: 8
+  flow_critical: 12
+  flow_warning: 6
+  current_critical: 8
+  current_warning: 5
+  multi_signal: 8
+health_caps:
+  critical: 45
+  warning: 75
+health_thresholds:
+  vibration_critical: 7.1
+  vibration_warning: 4.5
+  temperature_critical: 82
+  temperature_warning: 75
+  flow_critical: 82
+  flow_warning: 88
+  current_critical: 46
+  current_warning: 44
+sensors:
+  vibration_de: P101_VIBRATION_DE_MM_S
+  vibration_nde: P101_VIBRATION_NDE_MM_S
+  temperature_de: P101_BEARING_TEMP_DE_C
+  temperature_nde: P101_BEARING_TEMP_NDE_C
+  discharge_pressure: P101_DISCHARGE_PRESSURE_BAR
+  suction_pressure: P101_SUCTION_PRESSURE_BAR
+  flow: P101_FLOW_M3_H
+  motor_current: M101_MOTOR_CURRENT_A
+  motor_speed: M101_MOTOR_SPEED_RPM
+  valve_position: V101_VALVE_POSITION_PCT
+notification:
+  application_link: http://localhost:8501
+quality_ranges:
+  P101_VIBRATION_DE_MM_S: [0, 20]
+  P101_VIBRATION_NDE_MM_S: [0, 20]
+  P101_BEARING_TEMP_DE_C: [0, 150]
+  P101_BEARING_TEMP_NDE_C: [0, 150]
+  P101_DISCHARGE_PRESSURE_BAR: [0, 15]
+  P101_SUCTION_PRESSURE_BAR: [0, 10]
+  P101_FLOW_M3_H: [0, 250]
+  M101_MOTOR_CURRENT_A: [0, 100]
+  M101_MOTOR_SPEED_RPM: [0, 1800]
+  V101_VALVE_POSITION_PCT: [0, 100]
+expected_missing_percent:
+  minimum: 0.5
+  maximum: 3.0

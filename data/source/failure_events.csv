@@ -1,0 +1,4 @@
+external_id,equipment,event_time,failure_mode,description,severity
+FE-2025-001,PUMP-P101,2025-03-02T06:10:00Z,Bearing wear,Drive-end bearing temperature and vibration rose together.,warning
+FE-2025-002,PUMP-P101,2025-05-20T08:00:00Z,Excess vibration,Coupling alignment was outside the preferred band.,warning
+FE-2025-003,MOTOR-M101,2025-10-21T09:00:00Z,Motor bearing overheating,Motor drive-end bearing temperature exceeded the inspection band.,warning

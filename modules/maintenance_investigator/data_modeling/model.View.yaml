@@ -1,0 +1,383 @@
+# Views map one-to-one onto the demo containers.
+- space: cdf_maintenance_demo
+  externalId: Site
+  version: v1
+  name: Site
+  properties:
+    name:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Site
+      containerPropertyIdentifier: name
+    description:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Site
+      containerPropertyIdentifier: description
+- space: cdf_maintenance_demo
+  externalId: FunctionalLocation
+  version: v1
+  name: FunctionalLocation
+  properties:
+    name:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: FunctionalLocation
+      containerPropertyIdentifier: name
+    description:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: FunctionalLocation
+      containerPropertyIdentifier: description
+    parent:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: FunctionalLocation
+      containerPropertyIdentifier: parent
+- space: cdf_maintenance_demo
+  externalId: Equipment
+  version: v1
+  name: Equipment
+  properties:
+    name:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Equipment
+      containerPropertyIdentifier: name
+    description:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Equipment
+      containerPropertyIdentifier: description
+    equipmentType:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Equipment
+      containerPropertyIdentifier: equipmentType
+    manufacturer:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Equipment
+      containerPropertyIdentifier: manufacturer
+    model:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Equipment
+      containerPropertyIdentifier: model
+    serialNumber:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Equipment
+      containerPropertyIdentifier: serialNumber
+    installationDate:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Equipment
+      containerPropertyIdentifier: installationDate
+    criticality:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Equipment
+      containerPropertyIdentifier: criticality
+    status:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Equipment
+      containerPropertyIdentifier: status
+    functionalLocation:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Equipment
+      containerPropertyIdentifier: functionalLocation
+- space: cdf_maintenance_demo
+  externalId: Sensor
+  version: v1
+  name: Sensor
+  properties:
+    name:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Sensor
+      containerPropertyIdentifier: name
+    unit:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Sensor
+      containerPropertyIdentifier: unit
+    measurementType:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Sensor
+      containerPropertyIdentifier: measurementType
+    timeSeriesExternalId:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Sensor
+      containerPropertyIdentifier: timeSeriesExternalId
+    equipment:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Sensor
+      containerPropertyIdentifier: equipment
+- space: cdf_maintenance_demo
+  externalId: WorkOrder
+  version: v1
+  name: WorkOrder
+  properties:
+    title:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: WorkOrder
+      containerPropertyIdentifier: title
+    description:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: WorkOrder
+      containerPropertyIdentifier: description
+    workType:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: WorkOrder
+      containerPropertyIdentifier: workType
+    priority:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: WorkOrder
+      containerPropertyIdentifier: priority
+    status:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: WorkOrder
+      containerPropertyIdentifier: status
+    openedTime:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: WorkOrder
+      containerPropertyIdentifier: openedTime
+    completedTime:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: WorkOrder
+      containerPropertyIdentifier: completedTime
+    failureMode:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: WorkOrder
+      containerPropertyIdentifier: failureMode
+    cause:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: WorkOrder
+      containerPropertyIdentifier: cause
+    correctiveAction:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: WorkOrder
+      containerPropertyIdentifier: correctiveAction
+    equipment:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: WorkOrder
+      containerPropertyIdentifier: equipment
+    relatedIncident:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: WorkOrder
+      containerPropertyIdentifier: relatedIncident
+- space: cdf_maintenance_demo
+  externalId: TechnicalDocument
+  version: v1
+  name: TechnicalDocument
+  properties:
+    title:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: TechnicalDocument
+      containerPropertyIdentifier: title
+    documentType:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: TechnicalDocument
+      containerPropertyIdentifier: documentType
+    revision:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: TechnicalDocument
+      containerPropertyIdentifier: revision
+    effectiveDate:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: TechnicalDocument
+      containerPropertyIdentifier: effectiveDate
+    sectionIndex:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: TechnicalDocument
+      containerPropertyIdentifier: sectionIndex
+    equipment:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: TechnicalDocument
+      containerPropertyIdentifier: equipment
+- space: cdf_maintenance_demo
+  externalId: MaintenanceIncident
+  version: v1
+  name: MaintenanceIncident
+  properties:
+    title:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: MaintenanceIncident
+      containerPropertyIdentifier: title
+    startTime:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: MaintenanceIncident
+      containerPropertyIdentifier: startTime
+    endTime:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: MaintenanceIncident
+      containerPropertyIdentifier: endTime
+    severity:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: MaintenanceIncident
+      containerPropertyIdentifier: severity
+    status:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: MaintenanceIncident
+      containerPropertyIdentifier: status
+    detectionRule:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: MaintenanceIncident
+      containerPropertyIdentifier: detectionRule
+    healthScore:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: MaintenanceIncident
+      containerPropertyIdentifier: healthScore
+    summary:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: MaintenanceIncident
+      containerPropertyIdentifier: summary
+    equipment:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: MaintenanceIncident
+      containerPropertyIdentifier: equipment
+- space: cdf_maintenance_demo
+  externalId: Investigation
+  version: v1
+  name: Investigation
+  properties:
+    generatedTime:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Investigation
+      containerPropertyIdentifier: generatedTime
+    confidence:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Investigation
+      containerPropertyIdentifier: confidence
+    modelInformation:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Investigation
+      containerPropertyIdentifier: modelInformation
+    observedFacts:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Investigation
+      containerPropertyIdentifier: observedFacts
+    evidence:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Investigation
+      containerPropertyIdentifier: evidence
+    hypotheses:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Investigation
+      containerPropertyIdentifier: hypotheses
+    recommendedActions:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Investigation
+      containerPropertyIdentifier: recommendedActions
+    safetyNotes:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Investigation
+      containerPropertyIdentifier: safetyNotes
+    incident:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Investigation
+      containerPropertyIdentifier: incident
+    equipment:
+      container:
+        type: container
+        space: cdf_maintenance_demo
+        externalId: Investigation
+      containerPropertyIdentifier: equipment

@@ -1,0 +1,70 @@
+- externalId: P101_VIBRATION_DE_MM_S
+  name: Pump P-101 drive-end vibration
+  unit: mm/s
+  description: Synthetic drive-end vibration
+  dataSetExternalId: cdf-maintenance-investigator-demo
+  metadata:
+    equipment: BEARING-P101-DE
+- externalId: P101_VIBRATION_NDE_MM_S
+  name: Pump P-101 non-drive-end vibration
+  unit: mm/s
+  description: Synthetic non-drive-end vibration
+  dataSetExternalId: cdf-maintenance-investigator-demo
+  metadata:
+    equipment: BEARING-P101-NDE
+- externalId: P101_BEARING_TEMP_DE_C
+  name: Pump P-101 drive-end bearing temperature
+  unit: C
+  description: Synthetic drive-end bearing temperature
+  dataSetExternalId: cdf-maintenance-investigator-demo
+  metadata:
+    equipment: BEARING-P101-DE
+- externalId: P101_BEARING_TEMP_NDE_C
+  name: Pump P-101 non-drive-end bearing temperature
+  unit: C
+  description: Synthetic non-drive-end bearing temperature
+  dataSetExternalId: cdf-maintenance-investigator-demo
+  metadata:
+    equipment: BEARING-P101-NDE
+- externalId: P101_DISCHARGE_PRESSURE_BAR
+  name: Pump P-101 discharge pressure
+  unit: bar
+  description: Synthetic discharge pressure
+  dataSetExternalId: cdf-maintenance-investigator-demo
+  metadata:
+    equipment: PUMP-P101
+- externalId: P101_SUCTION_PRESSURE_BAR
+  name: Pump P-101 suction pressure
+  unit: bar
+  description: Synthetic suction pressure
+  dataSetExternalId: cdf-maintenance-investigator-demo
+  metadata:
+    equipment: PUMP-P101
+- externalId: P101_FLOW_M3_H
+  name: Pump P-101 flow
+  unit: m3/h
+  description: Synthetic cooling-water flow
+  dataSetExternalId: cdf-maintenance-investigator-demo
+  metadata:
+    equipment: PUMP-P101
+- externalId: M101_MOTOR_CURRENT_A
+  name: Motor M-101 current
+  unit: A
+  description: Synthetic motor current
+  dataSetExternalId: cdf-maintenance-investigator-demo
+  metadata:
+    equipment: MOTOR-M101
+- externalId: M101_MOTOR_SPEED_RPM
+  name: Motor M-101 speed
+  unit: rpm
+  description: Synthetic motor speed
+  dataSetExternalId: cdf-maintenance-investigator-demo
+  metadata:
+    equipment: MOTOR-M101
+- externalId: V101_VALVE_POSITION_PCT
+  name: Valve V-101 position
+  unit: "%"
+  description: Synthetic discharge valve position
+  dataSetExternalId: cdf-maintenance-investigator-demo
+  metadata:
+    equipment: VALVE-V101

@@ -1,0 +1,9 @@
+services:
+  investigator:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      APP_MODE: local
+      AI_PROVIDER: mock
+      LOG_LEVEL: INFO

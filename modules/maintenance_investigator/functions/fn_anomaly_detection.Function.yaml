@@ -1,0 +1,9 @@
+externalId: fn_anomaly_detection
+name: Detect maintenance anomalies
+description: Rule-based Pump P-101 detection for the development demo.
+functionPath: handler.py
+owner: maintenance-investigator-demo
+runtime: py311
+dataSetExternalId: cdf-maintenance-investigator-demo
+metadata:
+  demo: pump-p101

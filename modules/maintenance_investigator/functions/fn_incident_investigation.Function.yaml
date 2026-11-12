@@ -1,0 +1,9 @@
+externalId: fn_incident_investigation
+name: Investigate maintenance incident
+description: Evidence-based Pump P-101 investigation for the development demo.
+functionPath: handler.py
+owner: maintenance-investigator-demo
+runtime: py311
+dataSetExternalId: cdf-maintenance-investigator-demo
+metadata:
+  demo: pump-p101

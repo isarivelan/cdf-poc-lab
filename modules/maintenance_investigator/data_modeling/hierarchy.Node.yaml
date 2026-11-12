@@ -1,0 +1,160 @@
+- space: cdf_maintenance_demo_instances
+  externalId: SITE-CHN-DEMO
+  sources:
+    - source:
+        type: view
+        space: cdf_maintenance_demo
+        externalId: Site
+        version: v1
+      properties:
+        name: Chennai Manufacturing Demo Site
+        description: Synthetic demonstration site. Not a real facility.
+- space: cdf_maintenance_demo_instances
+  externalId: FL-UTILITIES
+  sources:
+    - source:
+        type: view
+        space: cdf_maintenance_demo
+        externalId: FunctionalLocation
+        version: v1
+      properties:
+        name: Utilities Area
+        description: Utilities functional location for the demo site.
+        parent:
+          space: cdf_maintenance_demo_instances
+          externalId: SITE-CHN-DEMO
+- space: cdf_maintenance_demo_instances
+  externalId: FL-CWS
+  sources:
+    - source:
+        type: view
+        space: cdf_maintenance_demo
+        externalId: FunctionalLocation
+        version: v1
+      properties:
+        name: Cooling Water System
+        description: Cooling water system inside the utilities area.
+        parent:
+          space: cdf_maintenance_demo_instances
+          externalId: FL-UTILITIES
+- space: cdf_maintenance_demo_instances
+  externalId: PUMP-P101
+  sources:
+    - source:
+        type: view
+        space: cdf_maintenance_demo
+        externalId: Equipment
+        version: v1
+      properties:
+        name: Cooling Water Pump 101
+        description: Centrifugal cooling-water pump. Synthetic demonstration asset.
+        equipmentType: centrifugal_pump
+        manufacturer: AquaFlow Industries
+        model: CF-200
+        serialNumber: SN-P101-DEMO
+        installationDate: "2022-04-15"
+        criticality: high
+        status: running
+        functionalLocation:
+          space: cdf_maintenance_demo_instances
+          externalId: FL-CWS
+- space: cdf_maintenance_demo_instances
+  externalId: MOTOR-M101
+  sources:
+    - source:
+        type: view
+        space: cdf_maintenance_demo
+        externalId: Equipment
+        version: v1
+      properties:
+        name: Motor for Pump 101
+        description: Induction motor coupled to Pump P-101.
+        equipmentType: induction_motor
+        manufacturer: Northwind Drives
+        model: ND-160
+        serialNumber: SN-M101-DEMO
+        installationDate: "2022-04-15"
+        criticality: high
+        status: running
+        functionalLocation:
+          space: cdf_maintenance_demo_instances
+          externalId: FL-CWS
+- space: cdf_maintenance_demo_instances
+  externalId: VALVE-V101
+  sources:
+    - source:
+        type: view
+        space: cdf_maintenance_demo
+        externalId: Equipment
+        version: v1
+      properties:
+        name: Pump discharge valve
+        description: Discharge isolation and control valve for Pump P-101.
+        equipmentType: control_valve
+        manufacturer: Harbor Valve
+        model: HV-90
+        serialNumber: SN-V101-DEMO
+        installationDate: "2022-04-15"
+        criticality: medium
+        status: open
+        functionalLocation:
+          space: cdf_maintenance_demo_instances
+          externalId: FL-CWS
+- space: cdf_maintenance_demo_instances
+  externalId: BEARING-P101-DE
+  sources:
+    - source:
+        type: view
+        space: cdf_maintenance_demo
+        externalId: Equipment
+        version: v1
+      properties:
+        name: Drive-end bearing
+        description: Drive-end rolling-element bearing on Pump P-101.
+        equipmentType: bearing
+        manufacturer: AquaFlow Industries
+        model: DE-6316
+        serialNumber: SN-P101-DE-DEMO
+        installationDate: "2025-03-12"
+        criticality: high
+        status: installed
+        functionalLocation:
+          space: cdf_maintenance_demo_instances
+          externalId: FL-CWS
+- space: cdf_maintenance_demo_instances
+  externalId: BEARING-P101-NDE
+  sources:
+    - source:
+        type: view
+        space: cdf_maintenance_demo
+        externalId: Equipment
+        version: v1
+      properties:
+        name: Non-drive-end bearing
+        description: Non-drive-end rolling-element bearing on Pump P-101.
+        equipmentType: bearing
+        manufacturer: AquaFlow Industries
+        model: NDE-6314
+        serialNumber: SN-P101-NDE-DEMO
+        installationDate: "2022-04-15"
+        criticality: medium
+        status: installed
+        functionalLocation:
+          space: cdf_maintenance_demo_instances
+          externalId: FL-CWS
+- space: cdf_maintenance_demo_instances
+  externalId: DOC-P101-MANUAL
+  sources:
+    - source:
+        type: view
+        space: cdf_maintenance_demo
+        externalId: TechnicalDocument
+        version: v1
+      properties:
+        title: Pump P-101 maintenance manual
+        documentType: maintenance_manual
+        revision: Demo-A
+        effectiveDate: "2026-01-15"
+        equipment:
+          space: cdf_maintenance_demo_instances
+          externalId: PUMP-P101

@@ -1,0 +1,6 @@
+- space: cdf_maintenance_demo
+  name: Maintenance investigator schema
+  description: Schema space for the synthetic Pump P-101 demonstration.
+- space: cdf_maintenance_demo_instances
+  name: Maintenance investigator instances
+  description: Instance space for synthetic demo nodes.

@@ -1,0 +1,11 @@
+external_id,name,unit,measurement_type,equipment,time_series_external_id
+P101_VIBRATION_DE_MM_S,Pump P-101 drive-end vibration,mm/s,vibration,BEARING-P101-DE,P101_VIBRATION_DE_MM_S
+P101_VIBRATION_NDE_MM_S,Pump P-101 non-drive-end vibration,mm/s,vibration,BEARING-P101-NDE,P101_VIBRATION_NDE_MM_S
+P101_BEARING_TEMP_DE_C,Pump P-101 drive-end bearing temperature,C,temperature,BEARING-P101-DE,P101_BEARING_TEMP_DE_C
+P101_BEARING_TEMP_NDE_C,Pump P-101 non-drive-end bearing temperature,C,temperature,BEARING-P101-NDE,P101_BEARING_TEMP_NDE_C
+P101_DISCHARGE_PRESSURE_BAR,Pump P-101 discharge pressure,bar,pressure,PUMP-P101,P101_DISCHARGE_PRESSURE_BAR
+P101_SUCTION_PRESSURE_BAR,Pump P-101 suction pressure,bar,pressure,PUMP-P101,P101_SUCTION_PRESSURE_BAR
+P101_FLOW_M3_H,Pump P-101 flow,m3/h,flow,PUMP-P101,P101_FLOW_M3_H
+M101_MOTOR_CURRENT_A,Motor M-101 current,A,current,MOTOR-M101,M101_MOTOR_CURRENT_A
+M101_MOTOR_SPEED_RPM,Motor M-101 speed,rpm,speed,MOTOR-M101,M101_MOTOR_SPEED_RPM
+V101_VALVE_POSITION_PCT,Valve V-101 position,%,position,VALVE-V101,V101_VALVE_POSITION_PCT

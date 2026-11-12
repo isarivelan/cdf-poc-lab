@@ -1,0 +1,6 @@
+[cdf]
+default_organization_dir = "."
+default_env = "dev"
+
+[modules]
+version = "0.9.79"

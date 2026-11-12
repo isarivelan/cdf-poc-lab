@@ -1,0 +1,90 @@
+# Rule-based detection for Pump P-101. Ground-truth labels are not an input.
+merge_gap_minutes: 15
+spike_note: >
+  A point above a threshold creates an incident only when the condition
+  stays true for duration_minutes. One-minute spikes do not qualify.
+rules:
+  - id: DE_VIB_WARNING
+    severity: warning
+    sensor: P101_VIBRATION_DE_MM_S
+    comparison: ">"
+    threshold: 4.5
+    duration_minutes: 10
+    description: Drive-end vibration above 4.5 mm/s
+  - id: DE_TEMP_WARNING
+    severity: warning
+    sensor: P101_BEARING_TEMP_DE_C
+    comparison: ">"
+    threshold: 75
+    duration_minutes: 10
+    description: Drive-end bearing temperature above 75 C
+  - id: FLOW_WARNING
+    severity: warning
+    sensor: P101_FLOW_M3_H
+    comparison: "<"
+    threshold: 88
+    duration_minutes: 10
+    description: Cooling-water flow below 88 m3/h
+  - id: CURRENT_WARNING
+    severity: warning
+    sensor: M101_MOTOR_CURRENT_A
+    comparison: ">"
+    threshold: 44
+    duration_minutes: 10
+    description: Motor current above 44 A
+  - id: DE_VIB_CRITICAL
+    severity: critical
+    sensor: P101_VIBRATION_DE_MM_S
+    comparison: ">"
+    threshold: 7.1
+    duration_minutes: 5
+    description: Drive-end vibration above 7.1 mm/s
+  - id: DE_TEMP_CRITICAL
+    severity: critical
+    sensor: P101_BEARING_TEMP_DE_C
+    comparison: ">"
+    threshold: 82
+    duration_minutes: 5
+    description: Drive-end bearing temperature above 82 C
+  - id: FLOW_CRITICAL
+    severity: critical
+    sensor: P101_FLOW_M3_H
+    comparison: "<"
+    threshold: 82
+    duration_minutes: 10
+    description: Cooling-water flow below 82 m3/h
+  - id: COMBINED_VIB_TEMP
+    severity: critical
+    kind: all_of
+    duration_minutes: 5
+    description: Combined drive-end vibration and bearing-temperature anomaly
+    conditions:
+      - sensor: P101_VIBRATION_DE_MM_S
+        comparison: ">"
+        threshold: 7.1
+      - sensor: P101_BEARING_TEMP_DE_C
+        comparison: ">"
+        threshold: 82
+  - id: MULTI_WARNING
+    severity: critical
+    kind: count_of_warning_rules
+    minimum_count: 3
+    duration_minutes: 10
+    description: Three or more sustained warning conditions in the same operating window
+statistical:
+  enabled: true
+  window_minutes: 180
+  min_periods: 60
+  modified_z: 3.5
+  sensors:
+    - P101_VIBRATION_DE_MM_S
+    - P101_BEARING_TEMP_DE_C
+    - P101_FLOW_M3_H
+    - M101_MOTOR_CURRENT_A
+rate_of_change:
+  window_minutes: 30
+  sensors:
+    - P101_VIBRATION_DE_MM_S
+    - P101_BEARING_TEMP_DE_C
+    - P101_FLOW_M3_H
+    - M101_MOTOR_CURRENT_A

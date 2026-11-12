@@ -1,0 +1,269 @@
+# Generated for cognite-toolkit 0.9. Containers use direct relations for links.
+- space: cdf_maintenance_demo
+  externalId: Site
+  name: Site
+  usedFor: node
+  properties:
+    name:
+      nullable: false
+      type:
+        type: text
+    description:
+      nullable: true
+      type:
+        type: text
+- space: cdf_maintenance_demo
+  externalId: FunctionalLocation
+  name: FunctionalLocation
+  usedFor: node
+  properties:
+    name:
+      nullable: false
+      type:
+        type: text
+    description:
+      nullable: true
+      type:
+        type: text
+    parent:
+      nullable: true
+      type:
+        type: direct
+- space: cdf_maintenance_demo
+  externalId: Equipment
+  name: Equipment
+  usedFor: node
+  properties:
+    name:
+      nullable: false
+      type:
+        type: text
+    description:
+      nullable: true
+      type:
+        type: text
+    equipmentType:
+      nullable: true
+      type:
+        type: text
+    manufacturer:
+      nullable: true
+      type:
+        type: text
+    model:
+      nullable: true
+      type:
+        type: text
+    serialNumber:
+      nullable: true
+      type:
+        type: text
+    installationDate:
+      nullable: true
+      type:
+        type: date
+    criticality:
+      nullable: true
+      type:
+        type: text
+    status:
+      nullable: true
+      type:
+        type: text
+    functionalLocation:
+      nullable: true
+      type:
+        type: direct
+- space: cdf_maintenance_demo
+  externalId: Sensor
+  name: Sensor
+  usedFor: node
+  properties:
+    name:
+      nullable: false
+      type:
+        type: text
+    unit:
+      nullable: true
+      type:
+        type: text
+    measurementType:
+      nullable: true
+      type:
+        type: text
+    timeSeriesExternalId:
+      nullable: true
+      type:
+        type: text
+    equipment:
+      nullable: true
+      type:
+        type: direct
+- space: cdf_maintenance_demo
+  externalId: WorkOrder
+  name: WorkOrder
+  usedFor: node
+  properties:
+    title:
+      nullable: false
+      type:
+        type: text
+    description:
+      nullable: true
+      type:
+        type: text
+    workType:
+      nullable: true
+      type:
+        type: text
+    priority:
+      nullable: true
+      type:
+        type: text
+    status:
+      nullable: true
+      type:
+        type: text
+    openedTime:
+      nullable: true
+      type:
+        type: timestamp
+    completedTime:
+      nullable: true
+      type:
+        type: timestamp
+    failureMode:
+      nullable: true
+      type:
+        type: text
+    cause:
+      nullable: true
+      type:
+        type: text
+    correctiveAction:
+      nullable: true
+      type:
+        type: text
+    equipment:
+      nullable: true
+      type:
+        type: direct
+    relatedIncident:
+      nullable: true
+      type:
+        type: direct
+- space: cdf_maintenance_demo
+  externalId: TechnicalDocument
+  name: TechnicalDocument
+  usedFor: node
+  properties:
+    title:
+      nullable: false
+      type:
+        type: text
+    documentType:
+      nullable: true
+      type:
+        type: text
+    revision:
+      nullable: true
+      type:
+        type: text
+    effectiveDate:
+      nullable: true
+      type:
+        type: date
+    sectionIndex:
+      nullable: true
+      type:
+        type: json
+    equipment:
+      nullable: true
+      type:
+        type: direct
+- space: cdf_maintenance_demo
+  externalId: MaintenanceIncident
+  name: MaintenanceIncident
+  usedFor: node
+  properties:
+    title:
+      nullable: false
+      type:
+        type: text
+    startTime:
+      nullable: true
+      type:
+        type: timestamp
+    endTime:
+      nullable: true
+      type:
+        type: timestamp
+    severity:
+      nullable: true
+      type:
+        type: text
+    status:
+      nullable: true
+      type:
+        type: text
+    detectionRule:
+      nullable: true
+      type:
+        type: text
+    healthScore:
+      nullable: true
+      type:
+        type: float64
+    summary:
+      nullable: true
+      type:
+        type: text
+    equipment:
+      nullable: true
+      type:
+        type: direct
+- space: cdf_maintenance_demo
+  externalId: Investigation
+  name: Investigation
+  usedFor: node
+  properties:
+    generatedTime:
+      nullable: true
+      type:
+        type: timestamp
+    confidence:
+      nullable: true
+      type:
+        type: float64
+    modelInformation:
+      nullable: true
+      type:
+        type: text
+    observedFacts:
+      nullable: true
+      type:
+        type: json
+    evidence:
+      nullable: true
+      type:
+        type: json
+    hypotheses:
+      nullable: true
+      type:
+        type: json
+    recommendedActions:
+      nullable: true
+      type:
+        type: json
+    safetyNotes:
+      nullable: true
+      type:
+        type: json
+    incident:
+      nullable: true
+      type:
+        type: direct
+    equipment:
+      nullable: true
+      type:
+        type: direct

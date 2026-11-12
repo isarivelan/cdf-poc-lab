@@ -1,0 +1,6 @@
+environment:
+  name: dev
+  project: maintenance-investigator-dev
+  validation-type: dev
+  selected:
+    - modules/maintenance_investigator

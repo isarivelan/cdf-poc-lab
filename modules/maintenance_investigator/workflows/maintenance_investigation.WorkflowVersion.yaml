@@ -1,0 +1,27 @@
+workflowExternalId: maintenance_investigation
+version: v1
+workflowDefinition:
+  description: Local-equivalent detection and investigation functions.
+  tasks:
+    - externalId: detect_anomalies
+      type: function
+      name: Detect anomalies
+      timeout: 600
+      parameters:
+        function:
+          externalId: fn_anomaly_detection
+          data:
+            equipmentExternalId: PUMP-P101
+        isAsyncComplete: false
+    - externalId: investigate_incident
+      type: function
+      name: Investigate incident
+      timeout: 600
+      dependsOn:
+        - externalId: detect_anomalies
+      parameters:
+        function:
+          externalId: fn_incident_investigation
+          data:
+            equipmentExternalId: PUMP-P101
+        isAsyncComplete: false

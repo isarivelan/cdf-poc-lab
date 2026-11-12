@@ -1,0 +1,38 @@
+space: cdf_maintenance_demo
+externalId: MaintenanceInvestigation
+version: v1
+name: Maintenance investigation
+description: Synthetic maintenance investigation model for Pump P-101.
+views:
+  - type: view
+    space: cdf_maintenance_demo
+    externalId: Site
+    version: v1
+  - type: view
+    space: cdf_maintenance_demo
+    externalId: FunctionalLocation
+    version: v1
+  - type: view
+    space: cdf_maintenance_demo
+    externalId: Equipment
+    version: v1
+  - type: view
+    space: cdf_maintenance_demo
+    externalId: Sensor
+    version: v1
+  - type: view
+    space: cdf_maintenance_demo
+    externalId: WorkOrder
+    version: v1
+  - type: view
+    space: cdf_maintenance_demo
+    externalId: TechnicalDocument
+    version: v1
+  - type: view
+    space: cdf_maintenance_demo
+    externalId: MaintenanceIncident
+    version: v1
+  - type: view
+    space: cdf_maintenance_demo
+    externalId: Investigation
+    version: v1

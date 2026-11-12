@@ -1,0 +1,56 @@
+# Safety-approved decision-support templates. The application does not execute them.
+templates:
+  - id: REC-VIB-HIGH
+    trigger: high_sustained_vibration
+    priority: high
+    source: SEC-VIBRATION-001
+    actions:
+      - Review the recent drive-end vibration trend and confirm the sensor is tracking.
+      - Inspect coupling alignment.
+      - Inspect the drive-end and non-drive-end bearings.
+      - Verify mounting and check for looseness.
+      - Check lubrication condition.
+  - id: REC-VIB-TEMP
+    trigger: high_vibration_and_temperature
+    priority: immediate
+    source: SEC-BEARING-001
+    actions:
+      - Prioritize drive-end bearing and lubrication checks.
+      - Review similar historical work orders before deciding the repair scope.
+      - Consider a controlled shutdown under site procedures if critical limits remain exceeded.
+  - id: REC-FLOW
+    trigger: low_flow
+    priority: high
+    source: SEC-FLOW-001
+    actions:
+      - Verify discharge valve position against the expected operating band.
+      - Inspect suction restrictions.
+      - Check discharge restrictions.
+      - Check for cavitation indicators.
+  - id: REC-CURRENT
+    trigger: high_motor_current
+    priority: medium
+    source: SEC-BEARING-001
+    actions:
+      - Compare motor current with vibration and bearing temperature before attributing the rise to the motor.
+      - Inspect the drive train for increasing friction.
+  - id: REC-ALIGNMENT
+    trigger: alignment_history
+    priority: medium
+    source: SEC-ALIGNMENT-001
+    actions:
+      - Include coupling alignment in the verification plan because historical work orders record misalignment on this pump.
+trigger_rules:
+  high_sustained_vibration:
+    - DE_VIB_WARNING
+    - DE_VIB_CRITICAL
+  high_vibration_and_temperature:
+    - COMBINED_VIB_TEMP
+    - DE_VIB_CRITICAL
+    - DE_TEMP_CRITICAL
+  low_flow:
+    - FLOW_WARNING
+    - FLOW_CRITICAL
+  high_motor_current:
+    - CURRENT_WARNING
+  alignment_history: []

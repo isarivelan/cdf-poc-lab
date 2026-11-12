@@ -1,0 +1,54 @@
+name: cdf-maintenance-investigator-demo
+sourceId: replace-with-idp-group-object-id
+metadata:
+  purpose: synthetic-demo
+  environment: dev
+capabilities:
+  - datasetsAcl:
+      actions: [READ]
+      scope:
+        idScope:
+          ids: ["replace-with-dataset-id"]
+  - timeSeriesAcl:
+      actions: [READ, WRITE]
+      scope:
+        datasetScope:
+          ids: ["replace-with-dataset-id"]
+  - dataModelsAcl:
+      actions: [READ, WRITE]
+      scope:
+        spaceIdScope:
+          spaceIds:
+            - cdf_maintenance_demo
+  - dataModelInstancesAcl:
+      actions: [READ, WRITE]
+      scope:
+        spaceIdScope:
+          spaceIds:
+            - cdf_maintenance_demo
+            - cdf_maintenance_demo_instances
+  - rawAcl:
+      actions: [READ, WRITE, LIST]
+      scope:
+        tableScope:
+          dbsToTables:
+            maint_inv_demo: [work_orders]
+  - transformationsAcl:
+      actions: [READ, WRITE]
+      scope:
+        datasetScope:
+          ids: ["replace-with-dataset-id"]
+  - workflowOrchestrationAcl:
+      actions: [READ, WRITE]
+      scope:
+        datasetScope:
+          ids: ["replace-with-dataset-id"]
+  - filesAcl:
+      actions: [READ, WRITE]
+      scope:
+        datasetScope:
+          ids: ["replace-with-dataset-id"]
+  - functionsAcl:
+      actions: [READ, WRITE]
+      scope:
+        all: {}

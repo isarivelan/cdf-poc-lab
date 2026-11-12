@@ -1,4 +1,4 @@
-# CDF Intelligent Maintenance Investigator
+# MaintIQ
 
 Evidence-based maintenance investigation for a fictional cooling-water pump in Cognite Data Fusion (CDF).
 
